@@ -1,0 +1,8 @@
+.button {
+  @apply w-full py-1.5 rounded-sm shadow-sm;
+}
+
+.note-form > input,
+.note-form > textarea {
+  @apply w-full;
+}
