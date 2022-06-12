@@ -29,8 +29,8 @@ export default class NoteForm extends React.Component {
     let result = "";
 
     // Solution taken from https://stackoverflow.com/a/53593174
-    if (inputText.length > 40) {
-      result = inputText.slice(0, 40);
+    if (inputText.length > 50) {
+      result = inputText.slice(0, 50);
     } else {
       result = inputText;
     }
@@ -57,15 +57,18 @@ export default class NoteForm extends React.Component {
     return (
       <Card>
         <form className="note-form" onSubmit={this.onSubmitEventHandler}>
-          <p>Sisa karakter {40 - this.state.title.length}</p>
+          <p>Sisa karakter {50 - this.state.title.length}</p>
           <input
+            className="note-input mb-3"
             type="text"
             name="title"
             placeholder="Nama catatan"
             value={this.state.title}
             onChange={this.onLimitChangeTitleHandler}
+            required
           />
           <textarea
+            className="note-input"
             name="body"
             id="body"
             cols="30"
@@ -73,9 +76,10 @@ export default class NoteForm extends React.Component {
             placeholder="Isi Catatan"
             value={this.state.body}
             onChange={this.onBodyChangeEventHandler}
+            required
           >
           </textarea>
-          <button className="button bg-primary text-dark" type="submit">
+          <button className="button border border-primary bg-white text-dark hover:bg-primary hover:text-white transition ease-linear" type="submit">
             Submit
           </button>
         </form>

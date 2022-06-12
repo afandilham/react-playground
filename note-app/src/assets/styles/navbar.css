@@ -1,5 +1,5 @@
 .note-navbar {
-  @apply container mx-auto mt-2 mb-10 max-w-md bg-dark text-white shadow-lg rounded-sm py-4 px-2;
+  @apply container mx-auto mt-2 mb-6 max-w-md bg-dark text-white shadow-lg rounded-sm py-4 px-2;
 }
 
 .note-navbar {
