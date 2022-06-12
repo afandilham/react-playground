@@ -27,7 +27,6 @@ export default class NoteApp extends React.Component {
   onAddNoteHandler({ title, body }) {
     this.setState((prev) => {
       let noteData = [
-        ...prev.initialData,
         {
           id: +new Date(),
           title,
@@ -48,6 +47,7 @@ export default class NoteApp extends React.Component {
     this.setState(() => { 
       return {
         initialData: notesData,
+        searchData: notesData,
       }
     });
   }
@@ -67,18 +67,17 @@ export default class NoteApp extends React.Component {
 
   onSearchNoteHandler(event) {
     if (event !== '') {
-      const results = this.state.initialData.filter(note => {
-        return note.title.toLowerCase().startsWith(event.toLowerCase());
-      });
-      this.setState(() => {
-        return {
-          initialData: [...results],
-        }
-      })
-    } else {
       this.setState((prev) => {
         return {
           ...prev,
+          initialData: prev.searchData.filter(note => {
+            return note.title.toLowerCase().startsWith(event.toLowerCase());
+          }),
+        }
+      })
+    } else {
+      this.setState(() => {
+        return {
           initialData: this.state.searchData
         }
       });
@@ -93,7 +92,7 @@ export default class NoteApp extends React.Component {
         <NoteSearch onSearch={this.onSearchNoteHandler} />
         <main>
           <NoteLists
-            title="Daftar Catatan"
+            title="Catatan Aktif"
             notes={this.state.initialData.filter(data => !data.archived)} 
             onDelete={this.onDeleteNoteHandler}
             onNoteAction={this.onArchiveNoteHandler}

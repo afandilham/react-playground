@@ -1,3 +1,36 @@
+.note-search {
+  @apply relative container max-w-md mx-auto flex justify-center my-4;
+}
+
 .note-lists {
-  @apply grid grid-cols-1 md:grid-cols-4 gap-6;
+  @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 my-4;
+}
+
+.note-item {
+  @apply flex flex-col justify-between max-w-md bg-white shadow-sm rounded-sm;
+}
+
+.note-body {
+  @apply p-4;
+}
+
+.note-item__created {
+  @apply text-xs text-gray-400;
+}
+
+.note-item__title {
+  @apply text-xs md:text-base pt-2 pb-1 font-medium capitalize overflow-hidden;
+}
+
+.note-item__body {
+  @apply container max-w-md font-light text-xs md:text-sm overflow-hidden;
+}
+
+.note-action,
+.note-action > button {
+  @apply flex;
+}
+
+.note-action > button {
+  @apply justify-center;
 }
