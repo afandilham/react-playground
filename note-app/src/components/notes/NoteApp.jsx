@@ -12,7 +12,7 @@ export default class NoteApp extends React.Component {
 
     this.state = {
       initialData: getData(),
-      searchData: getData(),
+      backupData: getData(),
     };
   
     this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
@@ -22,11 +22,13 @@ export default class NoteApp extends React.Component {
     this.onArchiveNoteHandler = this.onArchiveNoteHandler.bind(this);
     
     this.onSearchNoteHandler = this.onSearchNoteHandler.bind(this);
+    this.onResetSearchData = this.onResetSearchData.bind(this);
   }
 
   onAddNoteHandler({ title, body }) {
     this.setState((prev) => {
       let noteData = [
+        ...prev.initialData,
         {
           id: +new Date(),
           title,
@@ -37,7 +39,7 @@ export default class NoteApp extends React.Component {
       ];
       return {
         initialData: noteData,
-        searchData: noteData,
+        backupData: noteData,
       };
     });
   }
@@ -47,7 +49,7 @@ export default class NoteApp extends React.Component {
     this.setState(() => { 
       return {
         initialData: notesData,
-        searchData: notesData,
+        backupData: notesData,
       }
     });
   }
@@ -65,20 +67,25 @@ export default class NoteApp extends React.Component {
     });
   }
 
+  onResetSearchData() {
+    
+  }
+
   onSearchNoteHandler(event) {
     if (event !== '') {
       this.setState((prev) => {
         return {
           ...prev,
-          initialData: prev.searchData.filter(note => {
+          initialData: prev.initialData.filter(note => {
             return note.title.toLowerCase().startsWith(event.toLowerCase());
           }),
         }
-      })
+      });
     } else {
-      this.setState(() => {
+      this.setState((prev) => {
         return {
-          initialData: this.state.searchData
+          ...prev,
+          initialData: this.state.backupData,
         }
       });
     }
