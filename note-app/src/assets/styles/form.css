@@ -1,0 +1,16 @@
+.button {
+  @apply w-full py-1.5 text-sm rounded-sm shadow-sm;
+}
+
+.note-form > input,
+.note-form > textarea {
+  @apply w-full;
+}
+
+.note-form > p {
+  @apply text-gray-500 font-medium text-sm flex justify-end;
+}
+
+.note-input {
+  @apply w-full p-2.5 font-medium border-2 rounded-md border-gray-300 focus:border-primary focus:ring-primary focus:outline-none;
+}

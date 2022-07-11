@@ -1,0 +1,19 @@
+.note-navbar {
+  @apply container mx-auto mt-2 mb-6 max-w-md bg-dark text-white shadow-lg rounded-sm py-4 px-2;
+}
+
+.note-navbar {
+  @apply flex justify-between items-center;
+}
+
+.note-navbar span {
+  @apply font-semibold;
+}
+
+.note-navbar__link {
+  @apply flex;
+}
+
+.note-navbar__link > a {
+  @apply px-2;
+}
