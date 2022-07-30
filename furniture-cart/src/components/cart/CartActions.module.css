@@ -1,0 +1,20 @@
+.actions,
+.summary {
+  @apply flex;
+}
+
+.actions {
+  @apply flex-col;
+}
+
+.summary {
+  @apply justify-between my-5;
+  
+  & > span {
+    @apply text-2xl font-semibold;
+  }
+}
+
+.button {
+  @apply btn btn-primary;
+}

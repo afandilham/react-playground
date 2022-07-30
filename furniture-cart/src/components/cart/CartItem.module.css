@@ -1,0 +1,29 @@
+.item,
+.summary {
+  @apply flex;
+}
+
+.item {
+  @apply flex-col py-4;
+}
+
+.summary {
+  @apply pt-6 items-center justify-between border-b border-primary pb-5;
+}
+
+.amount,
+.button {
+  @apply text-neutral;
+}
+
+.amount {
+  @apply text-sm font-bold w-20 p-2 text-center outline-none bg-neutral-content border-x border-base-100 rounded-sm;
+}
+
+.button {
+  @apply px-3 py-2 bg-primary text-sm font-semibold outline-none;
+}
+
+.input {
+  @apply pr-4;
+}

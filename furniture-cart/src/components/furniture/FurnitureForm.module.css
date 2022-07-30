@@ -1,0 +1,20 @@
+.form {
+  &,
+  .input {
+    @apply flex;
+  }
+
+  @apply flex-col justify-end items-end gap-y-3;
+  
+  & .input {
+    @apply justify-end items-center mt-2;
+  }
+
+  & .input > label {
+    @apply px-3 font-semibold;
+  }
+
+  & .button {
+    @apply w-28 btn btn-sm btn-primary rounded-md;
+  }
+}

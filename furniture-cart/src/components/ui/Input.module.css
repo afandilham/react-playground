@@ -1,0 +1,7 @@
+.input {
+  @apply text-sm text-base-200 font-bold w-[4.2rem] p-[8px] text-center outline-none rounded-sm;
+
+  &:disabled {
+    @apply bg-white;
+  }
+}

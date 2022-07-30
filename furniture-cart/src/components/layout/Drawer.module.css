@@ -1,0 +1,7 @@
+.drawer {
+  @apply top-0 right-0 w-[400px] h-full bg-base-300 shadow-xl z-20 fixed ease-in-out duration-200;
+}
+
+.overlay {
+  @apply fixed top-0 w-screen h-screen bg-base-200 opacity-60 z-10;
+}

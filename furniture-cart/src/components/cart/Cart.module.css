@@ -1,0 +1,7 @@
+.cart {
+  @apply flex flex-col px-4 justify-between;
+
+  & .lists {
+    @apply overflow-y-auto h-[430px];
+  }
+}

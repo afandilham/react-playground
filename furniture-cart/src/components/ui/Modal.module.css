@@ -1,0 +1,19 @@
+.overlay {
+  @apply fixed w-full h-screen bg-base-200 opacity-50 z-30;
+}
+
+.modal {
+  @apply fixed left-0 right-0 bottom-0 top-[20vh] h-[150px] container mx-auto max-w-lg bg-base-300 rounded-lg shadow-xl z-40 transition ease-in-out delay-100;
+}
+
+.content {
+  @apply p-5;
+}
+
+.heading {
+  @apply mb-4 text-lg font-semibold;
+}
+
+.message {
+  @apply text-base;
+}
