@@ -1,0 +1,7 @@
+.weather {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 500px;
+  grid-row-gap: 0px;
+}

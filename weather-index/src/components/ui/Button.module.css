@@ -1,0 +1,19 @@
+.button {
+  padding: .8em .9em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: var(--secondary-color) 2px solid;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transition: all .1s ease-in;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--secondary-color);
+}
+
+.button:focus {
+  outline: none;
+}

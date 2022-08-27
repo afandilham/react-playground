@@ -1,0 +1,44 @@
+.pin {
+  display: flex;
+  gap: 1.2em;
+  width: 100%;
+  padding: 1em;
+  overflow-x: scroll;
+}
+
+.pin>h3 {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.pin::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+.pin::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 5px;
+}
+
+.content-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.descriptions-control>p {
+  padding: .7em 0;
+}
+
+.more-information {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.info {
+  padding: 7px 0;
+}

@@ -1,0 +1,25 @@
+.content {
+  display: flex;
+  align-items: start;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .8em;
+}
+
+.desc {
+  padding-left: 1em;
+}
+
+.desc>span {
+  font-size: 1rem;
+}
+
+.desc>p {
+  padding-top: .2em;
+  font-weight: 500;
+  font-size: 1.6rem;
+}

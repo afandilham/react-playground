@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --primary-color: #383F73;
+  --secondary-color: #5762B3;
+  --indigo-1: #7785F2;
+  --indigo-2: #7D8CFF;
+  --indigo-3: #6A77D9;
+  --white: #FFFF;
+  --red: #fd7998;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  background: url('./assets/blue-cloud.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
